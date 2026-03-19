@@ -10,6 +10,7 @@ with open("data/visitors.json", "r+") as f:
     data.append({"time": datetime.now().isoformat()})
     f.seek(0)
     json.dump(data, f)
+    f.truncate()
 
 # 뉴스 로딩
 with open("data/analyzed.json", "r", encoding="utf-8") as f:
